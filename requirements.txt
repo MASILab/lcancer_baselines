@@ -1,0 +1,31 @@
+# sphinx_rtd_theme
+recommonmark
+sphinx>=3.2.1
+# deep learning
+pytorch_lightning==1.5.6
+lightning
+einops
+# math
+scikit-learn==1.0.2
+# utils
+tqdm
+lifelines==0.26.4
+python-dotenv
+# loading
+opencv-python==4.5.4.60
+albumentations==1.1.0
+pydicom==2.2.2
+python-gdcm # for pydicom to load compressed dicoms 
+# logging
+#comet-ml
+torchio==0.18.74
+# downloading snapshots
+gdown==4.6.0
+# 3d resize
+resize @ git+https://github.com/shuohan/resize.git
+
+# local directories
+-e /home/local/VANDERBILT/litz/github/MASILab/lcancer_baselines
+
+
+
