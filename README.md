@@ -1,1 +1,3 @@
 # Benchmarking lung cancer models and datasets
+
+T.Z. Li, K. Xu, A. Krishnan, R. Gao, M.N. Kammer, S. Antic, D. Xiao, M. Knight, Y. Martinez, R. Paez, R.J. Lentz, S. Deppen, E.L. Grogan, T.A. Lasko, K.L. Sandler, F. Maldonado, B.A. Landman, No winners: Performance of lung cancer prediction models depends on screening-detected, incidental, and biopsied pulmonary nodule use cases, (2024). https://arxiv.org/abs/2405.10993v1
