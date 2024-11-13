@@ -1,0 +1,27 @@
+data:
+  dataset: "liao"
+  datacache: "nlst"
+  batch_size: 5
+  val_split: 0.2
+  date_format: "%Y"
+  label: 'cancer_year1'
+
+logging:
+  log_every_n_steps: 4
+  val_every_n_epoch: 1
+
+model:
+  model_name: "liao"
+  lmodel: "BinaryClassifier"
+  noduleft_dim: 128
+  y_one_hot: False
+  output_logit: False
+  checkpoint: null
+
+optimization:
+  lr: !!float 3e-4
+  warmup_steps: 100
+  epochs: 10000
+  patience: 2000
+  val_metric: "val_auc"
+
