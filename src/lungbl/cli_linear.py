@@ -4,6 +4,7 @@ from lungbl.linear.model import Brock, Mayo, PLCO2012
 from lungbl.utils.modeling import auc_from_df
 import lungbl.definitions as definitions 
 from lungbl.utils.statutils import bootstrap
+from lungbl.cachedcohorts import NLST_CohortWrapper
 
 
 MODELS = {
@@ -13,7 +14,8 @@ MODELS = {
 }
 
 COHORTS = {
-    # Load cohorts as pandas dataframes
+    'nlst.test_scan': lambda: NLST_CohortWrapper().test_scan,
+    'nlst.ft_test_scan': lambda: NLST_CohortWrapper().ft_test_scan,
 }
 
 def export_pred(df, model, cohort, label):

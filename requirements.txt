@@ -25,7 +25,8 @@ gdown==4.6.0
 resize @ git+https://github.com/shuohan/resize.git
 
 # local directories
--e /home/local/VANDERBILT/litz/github/MASILab/lcancer_baselines
+-e /home/github/lcancer_baselines
+-e /home/github/DeepLungScreening
 
 
 

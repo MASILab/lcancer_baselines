@@ -7,22 +7,9 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 import lightning as L
 from sklearn.model_selection import StratifiedKFold
+from lungbl.cachedcohorts import CachedCohort
 
 from lungbl import definitions
-
-@dataclass
-class CachedCohort:
-    name: str
-    init: Callable
-    imgft_data: Optional[str] = None    # pretrained whole img features
-    expr_data: Optional[str] = None     # expressions of clinical signatures
-    noduleft_data: Optional[str] = None # pretrained nodule features
-    img_data: Optional[str] = None      # raw nifti images
-    imgprep_data: Optional[str] = None  # preprocessed images
-    imgbbox_data: Optional[str] = None  # bounding boxes of nodule ROIs
-    imgprep_list: Optional[str] = None  # list of preprocessed images
-    dlsft64_data: Optional[str] = None  # pretrained 64-dim DLS features
-    dlsft128_data: Optional[str] = None # pretrained 128-dim DLS features
 
 class Item(TypedDict):
     pid: str

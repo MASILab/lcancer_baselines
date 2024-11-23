@@ -12,6 +12,7 @@ from lungbl.sybil_bl.datasets import SerieDataset
 from lungbl.tdvit.datasets import LongitudinalFeatDataset
 from lungbl.dlstm.datasets import DLSTMFeatDataset
 from lungbl.dls.datasets import DLSDataset
+from lungbl.cachedcohorts import NAMES, NLST_CACHE
 
 @dataclass
 class Baselines:
@@ -34,11 +35,6 @@ DATASETS = {
 }
 CACHED_COHORTS = {
     NAMES.nlst: NLST_CACHE,
-    NAMES.vlsp: VLSP_CACHE,
-    NAMES.mcl: MCL_CACHE,
-    NAMES.bronch: BRONCH_CACHE,
-    NAMES.livu: LIVU_CACHE,
-    NAMES.livuspn: LIVUSPN_CACHE,
 }
 
 class Config():

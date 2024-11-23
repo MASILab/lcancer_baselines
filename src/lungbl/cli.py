@@ -4,6 +4,7 @@ import lightning as L
 from lungbl.train import train, test, predict
 from lungbl.config import LMODELS, Config, datamodule_from_config, trainer_from_config, checkpoint_from_config
 from lungbl.utils.modeling import auc_from_df
+from lungbl.cachedcohorts import NLST_CohortWrapper
 
 from lungbl import definitions
 from lungbl.utils.statutils import bootstrap
@@ -22,6 +23,10 @@ def find_max_epoch(ckpt_folder):
 
 COHORTS = {
     # Load cohorts as pandas dataframes
+    'nlst.train_cohort': lambda: NLST_CohortWrapper().train_cohort,
+    'nlst.ft_train': lambda: NLST_CohortWrapper().ft_train,
+    'nlst.test_scan': lambda: NLST_CohortWrapper().test_scan,
+    'nlst.ft_test_scan': lambda: NLST_CohortWrapper().ft_test_scan,
 }
 
 def cli_main():
