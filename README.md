@@ -28,21 +28,21 @@ NLST_CACHE = CachedCohort(
 )
 ```
 ### nlst.csv
-NLST_CACHE.cohort should point to a csv with the format
+`NLST_CACHE.cohort` should point to a csv with the format
 | pid        | lung_cancer | nodule_count |
 | ----------- | ----- | ----- |
 | unique patient ID | 0 or 1 label | int (optional) |
 ### nlst_scan.csv
-NLST_CACHE.scan_cohort should point to a csv with the format
-| pid        | scandate          | scanorder | lung_cancer | nodule_count |
-| ----------- | ------------ | ----- | ----- | ----- |
-| unique patient ID | %Y%m%d | int with 0 being earliest scan | 0 or 1 label | int (optional) |
+`NLST_CACHE.scan_cohort` should point to a csv with the format
+| pid        | scandate          | scanorder | fpath | lung_cancer | nodule_count |
+| ----------- | ------------ | ----- | ----- | --- | ----- |
+| unique patient ID | %Y%m%d | int with 0 being earliest scan | path to CT scan with suffix `.nii.gz` | 0 or 1 label | int (optional) |
 ### test_set.csv (optional)
-NLST_CACHE.test should point to a csv with the format
+`NLST_CACHE.test` should point to a csv with the format
 Here we use the test set given [Ardila et al.](https://www.nature.com/articles/s41591-019-0447-x) test set 
 
 ### nifti/
-NLST_CACHE.img_data should point to a directory of CT scans in NIfTI format (`.nii.gz`)
+`NLST_CACHE.img_data` should point to a directory of CT scans in NIfTI format (`.nii.gz`)
 
 ### Liao and DeepLungScreening pipelines
 Some models rely on the features from the Liao et al. model. The following pipeline will compute intermediate data and features in the locations specified in `imgprep_data`, `imgbbox_data`, `dlsft64_data`, and `dlsft128_data`. 
